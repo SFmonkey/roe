@@ -18,7 +18,7 @@ program
         }
     );
     inquirer.prompt(promps).then((answers: any) => {
-        new initProject(`./${answers.init}`);
+        new initProject(answers.init);
     });
   })
   .on('--help', () => {
