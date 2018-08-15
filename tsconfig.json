@@ -58,7 +58,7 @@
   },
   "include": [
     "./index.d.ts",
-    "src/**/index.ts"
+    "src/**/*.ts"
   ],
   "exclude": []
 }
