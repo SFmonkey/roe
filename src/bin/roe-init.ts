@@ -8,7 +8,7 @@ program
   .usage('init/i')
   .action(() => {
     console.log('in action')
-    let promps: Array<Object> = [];
+    let promps: Array <Object> = [];
     promps.push(
         {
             type: 'input',

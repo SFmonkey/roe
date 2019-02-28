@@ -4,7 +4,8 @@
   "description": "A build tools inspired by dophin",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc -w"
+    "dev": "tsc -w",
+    "lint": "tslint -p ./"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@types/inquirer": "0.0.42",
     "@types/node": "^10.7.0",
+    "tslint": "^5.13.0",
     "typescript": "^3.0.1"
   },
   "dependencies": {
