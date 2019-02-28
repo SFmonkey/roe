@@ -6,7 +6,6 @@ program
   .version('0.0.1')
   .description('初始化项目')
   .usage('init/i')
-  .option('init')
   .action(() => {
     console.log('in action')
     let promps: Array<Object> = [];
