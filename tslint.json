@@ -1,13 +1,13 @@
 {
-    "extends": ["tslint:recommended"],
-    "rules": {
-        "align": [true, "parameters", "statements", "members", "elements"],
-        "indent": [true, "spaces", 4],
-        "max-line-length": [false, 200],
-        "quotemark": [true, "single", "jsx-double", "avoid-escape", "avoid-template"],
-        "eofline": true,
-        "only-arrow-functions": false,
-        "variable-name": [
+    "extends": ["tslint:recommended"],  // 继承的配置
+    "rules": {  // 自己添加的 ts 或 tsx 配置用来覆盖 extends
+        "align": [true, "parameters", "statements", "members", "elements"], //定义对齐风格
+        "indent": [true, "spaces", 4],  // 缩进
+        "max-line-length": [false, 200], //定义每行代码数
+        "quotemark": [true, "single", "jsx-double", "avoid-escape", "avoid-template"], //定义字符串的引号
+        "eofline": true, // 确保文件的结尾会有一个新行
+        "only-arrow-functions": false, // 不允许传统函数表达式
+        "variable-name": [  //定义变量的命名规则
             true,
             "ban-keywords",
             "check-format",
@@ -16,20 +16,20 @@
             "allow-pascal-case",
             "allow-snake-case"
         ],
-        "no-var-requires": false,
-        "ordered-imports": false,
-        "object-literal-sort-keys": false,
-        "no-eval": false,
-        "no-console": false,
-        "no-empty": [true, "allow-empty-catch", "allow-empty-functions"],
-        "no-string-literal": false,
-        "no-unused-expression": [true, "allow-fast-null-checks", "allow-new", "allow-tagged-template"],
-        "no-namespace": false,
-        "no-duplicate-imports": true,
-        "one-variable-per-declaration": false,
-        "object-literal-shorthand": false,
-        "curly": [true, "ignore-same-line"],
-        "trailing-comma": [
+        "no-var-requires": false,   // 不允许 var 变量来引入 require 文件
+        "ordered-imports": false,   // 按照字母顺序和分组来 import
+        "object-literal-sort-keys": false, // 对象中按照字母顺序写 key
+        "no-eval": false,   //不允许使用 eval
+        "no-console": false,    //不允许使用 console
+        "no-empty": [true, "allow-empty-catch", "allow-empty-functions"],   //函数体不允许空 
+        "no-string-literal": false, //不允许常规的对象下标访问
+        "no-unused-expression": [true, "allow-fast-null-checks", "allow-new", "allow-tagged-template"], //允许使用未使用的表达式 
+        "no-namespace": false,  //不允许使用内部的模块和空间
+        "no-duplicate-imports": true,   //禁止重复引用
+        "one-variable-per-declaration": false,  //禁止在统一行声明多个变量
+        "object-literal-shorthand": false,  //  不强制对象属性简写
+        "curly": [true, "ignore-same-line"],    // if/for/do/while强制使用大括号
+        "trailing-comma": [ // 允许对象或数组等添加最后一个逗号
             true,
             {
                 "multiline": {
@@ -42,7 +42,7 @@
                 "esSpecCompliant": true
             }
         ],
-        "space-before-function-paren": [
+        "space-before-function-paren": [    //允许函数圆括号前有空格
             true,
             {
                 "anonymous": "always",
@@ -50,15 +50,15 @@
                 "asyncArrow": "always"
             }
         ],
-        "prefer-const": [
+        "prefer-const": [   // 要求尽量使用 const
             true,
             {
                 "destructuring": "all"
             }
         ],
-        "radix": false,
-        "forin": false,
-        "interface-name": false,
-        "no-reference": false
+        "radix": false, //parseInt时，不是必须输入radix精度参数
+        "forin": false, //使用for in语句时，不是强制进行hasOwnProperty检查
+        "interface-name": false,    // interface 不必须以I开头
+        "no-reference": false   //允许利用 /// 引入其他文件
     }
 }
