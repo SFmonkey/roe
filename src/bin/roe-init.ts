@@ -7,13 +7,13 @@ program
   .description('初始化项目')
   .usage('init/i')
   .action(() => {
-    console.log('in action')
-    let promps: Array <Object> = [];
+    console.log('in action');
+    const promps: Array <Object> = [];
     promps.push(
         {
             type: 'input',
             name: 'init',
-            message: 'please input project name:'
+            message: 'please input project name:',
         }
     );
     inquirer.prompt(promps).then((answers: any) => {
@@ -21,8 +21,8 @@ program
     });
   })
   .on('--help', () => {
-      console.log(`\n  说明:\n`);
-      console.log(`    初始化项目`);
-      console.log(`    node init/i 项目名\n`);
+      console.log('\n  说明:\n');
+      console.log('    初始化项目');
+      console.log('    node init/i 项目名\n');
   })
   .parse(process.argv);
