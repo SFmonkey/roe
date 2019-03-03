@@ -1,14 +1,12 @@
 import {compileInter} from './compile';
 
-class compile implements compileInter.compileClass{
-    constructor () {
-    }
+class Compile implements compileInter.compileClass {
 
-    config = {
+    public config = {
         projectDir: '',
         inputDir: '',
-        outputDir: ''
-    }
+        outputDir: '',
+    };
 }
 
-export default compile;
+export default Compile;
