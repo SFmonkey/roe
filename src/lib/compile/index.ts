@@ -1,12 +1,7 @@
-import {compileInter} from './compile';
+import compileJS from './js';
 
-class Compile implements compileInter.compileClass {
+const run = () => {
+    compileJS();
+};
 
-    public config = {
-        projectDir: '',
-        inputDir: '',
-        outputDir: '',
-    };
-}
-
-export default Compile;
+export default run;
